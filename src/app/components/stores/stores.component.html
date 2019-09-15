@@ -1,0 +1,172 @@
+
+  
+  <head>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+	<!-- <style>
+			.searchbar{
+			margin-bottom: auto;
+			margin-top: auto;
+			height: 40px;
+			background-color: #353b48;
+			border-radius: 30px;
+			padding: 10px;
+			
+			}
+	
+			.search_input{
+			color: white;
+			border: 0;
+			outline: 0;
+			background: none;
+			width: 0;
+			caret-color:transparent;
+			line-height: 10px;
+			transition: width 0.2s linear;
+		
+			}
+	
+			.searchbar:hover > .search_input{
+			padding: 0 10px;
+			width: 200px;
+			caret-color:red;
+			transition: width 0.4s linear;
+			}
+	
+			.searchbar:hover > .search_icon{
+			background: white;
+			color: #e74c3c;
+			}
+	
+			.search_icon{
+			height: 40px;
+			width: 40px;
+			float: right;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border-radius: 50%;
+			color:white;
+			}
+	</style> -->
+	
+	<style>
+		body
+		{
+			margin : 0;
+			padding : 0;
+			background: rgb(10, 3, 48);
+			background-size: cover;
+			font-family: sans-serif;
+		}
+		h1
+		{
+			margin: 0 0 10px;
+			padding: 0;
+			color: rgb(255, 247, 247);
+			font-size: 24px;
+		}
+		.box
+		{
+			right: 30%;
+			transform: translate(75%, 10%);
+		}
+		input
+		{
+			position: relative;
+			display: inline-block;
+			box-sizing: border-box;
+			font-size: 13px;
+			transition: .5s;
+		}
+		input[type="text"]
+		{
+			background: #ffffff;
+			height: 25px;
+			border: none;
+			outline: none;
+			padding: 0 25px;
+			border-radius: 25px 0 0 25px;
+		}
+		input[type="submit"]
+		{
+			position: relative;
+			border-radius: 0 25px 25px 0;
+			padding: 0 25px;
+			height: 25px;
+			border: none;
+			outline: none;
+			cursor: pointer;
+			background: #ffc107;
+			color: #fff;
+		}
+
+		input[type="submit"]:hover
+		{
+			background: #ff5722;
+		}
+		
+	</style>
+  </head>
+<body>
+<!-- <div class="container float-right">	
+		<div class="container h-10">
+			
+				<div class="d-flex float-right h-10">
+					<div class="searchbar">
+					<input class="search_input" type="text" name="" placeholder="Search...">
+					<a href="#" class="search_icon"><i class="fas fa-search"></i></a>
+					</div>
+									
+										<button class="btn btn-info dropdown-toggle mr-4" type="button" data-toggle="dropdown"
+										aria-haspopup="true" aria-expanded="false">category</button>
+
+										<div class="dropdown-menu">
+										<a class="dropdown-item" href="#">GLN</a>
+										<a class="dropdown-item" href="#">Company ID</a>
+										<div class="dropdown-divider"></div>
+										<a class="dropdown-item" href="#">Separated link</a>
+										</div>
+									
+				</div>
+		 </div>
+		 
+</div>		 -->
+	
+	<div class="box">
+		<br>
+		<form>
+			<input type="text" name="" placeholder="Type...">
+			<input type="submit" value="Search">
+		</form>
+	</div>
+		
+<table class="table table-hover table-dark">
+				<tr style="background-color:#19242e; color: #ffffff">	
+					<th>Physical ID</th>
+					<th>Company Number</th>
+					<th>Physical Name</th>
+					<th>Country_Name</th>
+					<th>Partner Person Name</th>
+					<th>GLN</th>
+						<th>GLN</th>
+					<th>GLN</th>
+				</tr>
+				<tr *ngFor="let store of stores">
+					<td>{{store.holding_company_id}}</td>
+					<td>{{store.holding_company_name}}</td>
+					<td>{{store.phys_id}}</td>
+					<td>{{store.comp_no}}</td>
+					<td>{{store.country_name}}</td>
+					<td>{{store.companies_id}}</td>
+					<td>{{store.deleted}}</td>
+					<td>{{store.iln}}</td>
+				</tr>
+			</table>
+
+</body>	
